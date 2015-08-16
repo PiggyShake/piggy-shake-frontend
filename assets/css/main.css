@@ -1575,7 +1575,7 @@ label {
   display: block;
   font-size: 0.9em;
   font-weight: bold;
-  margin: 0 0 1em 0; }
+  margin: 0 10 1em 0; }
 
 input[type="text"],
 input[type="password"],
@@ -2769,7 +2769,7 @@ table.alt tbody tr td {
       background-image: url("images/overlay.png"), url("images/pattern-size2.svg"); } }
   @media screen and (max-width: 980px) {
     #header {
-      height: auto;
+      height: 100vh;
       min-height: 0; }
       #header .content {
         margin: -2em 4em 0 0; } }
@@ -2790,7 +2790,8 @@ table.alt tbody tr td {
 
   @media screen and (max-width: 736px) {
     #header {
-      background-image: url("images/overlay.png"), url("images/pattern-size3.svg"); }
+      background-image: url("images/overlay.png"), url("images/pattern-size3.svg");
+      height: 100vh; }
       #header h1 {
         font-size: 2em; }
       #header p {
@@ -2814,16 +2815,19 @@ table.alt tbody tr td {
         font-size: 0.6em;
         max-width: 60vw; } }
 
-@media screen and (max-width: 480px) and (orientation: landscape) {
-  #header {
-    padding: 2em 1.5em 0.1em 1.5em ; }
-    #header .image {
-      font-size: 0.7em; }
-    #header .actions {
-      font-size: 0.8em; } }
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  #header {
-    padding: 2em 1em 0.1em 1em ; } }
+  @media screen and (max-width: 480px) {
+    #header {
+      height: 100vh; } }
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    #header {
+      padding: 2em 1.5em 0.1em 1.5em ; }
+      #header .image {
+        font-size: 0.7em; }
+      #header .actions {
+        font-size: 0.8em; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    #header {
+      padding: 2em 1em 0.1em 1em ; } }
 
   body.is-mobile #header {
     background-attachment: scroll, scroll; }
